@@ -1,0 +1,235 @@
+.main__details {
+    color: var(--clr-black);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+
+.main__container {
+    padding-right: 1rem;
+    margin-right: .5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.img__container {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img__container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: #000000b3;
+    z-index: -1;
+}
+
+.watch__trailer {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.watch__icon {
+    font-size: 2rem;
+}
+
+.img__container img {
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.info>div {
+    display: flex;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.info p {
+    font-size: clamp(0.9rem, 1rem, 1.8rem);
+    line-height: 1.1;
+    display: flex;
+    align-items: center;
+}
+
+.info p span {
+    height: 5px;
+    width: 5px;
+    background-color: rgb(31 41 55);
+    margin-right: 0.6rem;
+    border-radius: 50%;
+}
+
+.genres {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.genres span {
+    padding-block: .2rem;
+    padding-inline: .5rem;
+    border-radius: 100vh;
+    font-size: 0.8rem;
+    color: rgb(244 63 94);
+    cursor: pointer;
+    border: 1px solid var(--clr-gray);
+    transition: all 250ms ease-in-out;
+}
+
+.genres span:hover {
+    border-color: rgb(244 63 94);
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    /* padding-inline: 1.5rem; */
+}
+
+.right button {
+    display: flex;
+    align-items: center;
+    padding-block: 0.8rem;
+    width: 100%;
+    font-size: 0.9rem;
+    padding-left: 10px;
+    gap: .6rem;
+    border-radius: .375rem;
+}
+
+.right button:nth-child(1) {
+    background-color: hsl(347, 77%, 50%);
+    border: 1px solid transparent;
+    color: var(--clr-white);
+}
+
+.right button:nth-child(2) {
+    background-color: hsl(353, 96%, 90%);
+    border: 1px solid red;
+}
+
+.best {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    overflow: hidden;
+}
+
+.best div {
+    overflow: hidden;
+    height: 170px;
+}
+
+.overview {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.minor__info p {
+    font-size: 0.9rem;
+}
+
+.minor__info p span {
+    color: var(--clr-pink);
+    font-weight: 500;
+}
+
+.best p {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-block: 1rem;
+    font-size: 0.9rem;
+    color: var(--clr-white);
+    border-bottom-left-radius: .375rem;
+    border-bottom-right-radius: .375rem;
+}
+
+.best div:nth-child(1) {
+    border-top-left-radius: .375rem;
+    border-bottom-left-radius: .375rem;
+    background-color: hsl(216, 12%, 84%);
+}
+
+.best div:nth-child(2) {
+    background-color: hsl(218, 11%, 65%);
+}
+
+.best div:nth-child(3) {
+    border-top-right-radius: .375rem;
+    border-bottom-right-radius: .375rem;
+    background-color: hsl(220, 9%, 46%);
+}
+
+.casts {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.casts p {
+    color: rgb(107 114 128);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.casts p span {
+    color: var(--clr-pink);
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+@media(max-width:305px) {
+    .info p {
+        font-size: 0.9rem;
+    }
+
+    .img__container {
+        height: 350px;
+    }
+
+    .main__container {
+        padding-right: 0;
+    }
+}
+
+@media (min-width:980px) {
+    .grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
