@@ -33,7 +33,7 @@ To run this project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/KelvinM9178/MovieBox.git
+   git clone https://github.com/KelvinM9187/MovieBox.git
    ```
 
 2. Navigate to the project directory:
